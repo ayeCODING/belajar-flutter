@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 
+import 'package:myapp/container.widget.dart';
+import 'package:myapp/news_container.dart';
+import 'package:myapp/row_column/biodata.dart';
+import 'package:myapp/row_column/column_widget.dart';
+import 'package:myapp/row_column/latihan_RowColumn.dart';
+import 'package:myapp/row_column/row_column.dart';
+import 'package:myapp/row_column/row_widget.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -17,18 +25,29 @@ class MyApp extends StatelessWidget {
             centerTitle: true,
             backgroundColor: Colors.greenAccent,
           ),
-          body: Center(
-            child: Text(
-              'Hello World',
-              style: TextStyle(
-                fontSize: 24,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                backgroundColor: Colors.lime,
-              ),
-            ),
-          ),
+          body: Biodata(),
         ),
+    );
+  }
+}
+
+class TextWidget extends StatelessWidget {
+  const TextWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+     child: Text(
+        'Hello World',
+        style: TextStyle(
+          fontSize: 24,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
+          backgroundColor: Colors.lime,
+        ),
+      ),
     );
   }
 }
